@@ -1,10 +1,12 @@
-<?php 
+<?php
     define('NOMBRE_SERVIDOR', "localhost");
     define('NOMBRE_BD', "test");
     define('NOMBRE_USUARIO', "root");
     define('PASSWORD', "");
-    
+
     define('TITULO_PAGINA', "Project");
+    
+    define('SERVIDOR', "http://localhost/code_blue/");
     
     define('DEP_CSS', SERVIDOR . "public/css/");
     define('DEP_SCRIPT', SERVIDOR . "public/js/");
