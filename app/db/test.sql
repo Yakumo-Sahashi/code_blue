@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `t_usuario`
 --
-CREATE DATABASE test;
-USE test;
+CREATE DATABASE code_blue;
+USE code_blue;
 
 CREATE TABLE `t_usuario` (
   `idUsuario` int(11) NOT NULL,
