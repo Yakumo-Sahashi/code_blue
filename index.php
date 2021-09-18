@@ -9,8 +9,10 @@
 </head>
 <body>
     <?php 
-        require_once 'view/navbar.php';
+        require_once 'view/main/loader.php';
+        require_once 'view/main/navbar.php';
         require_once 'app/control_url.php';
+        require_once 'view/main/footer.php';
     ?>    
 </body>
 </html>
