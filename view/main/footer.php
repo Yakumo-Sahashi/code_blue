@@ -19,7 +19,7 @@
                         <a href="https://www.facebook.com/tecmilpaalta2" class="redes" target="_blank" title="Facebook"><i class="fab fa-facebook fa-2x mx-1"></i></a>
                         <a href="https://twitter.com/TecNMMilpaAlta2" class="redes" target="_blank" title="Twiter"><i class="fab fa-twitter fa-2x mx-1"></i></a>
                         <a href="https://www.youtube.com/channel/UCXJVuz9lnFc03mObS-0wYOg" class="redes" target="_blank" title="YouTube"><i class="fab fa-youtube fa-2x mx-1"></i></a>
-                        <a href="#" class="redes"><i class="fab fa-github fa-2x mx-1" target="_blank" title="GitHub"></i></a>
+                        <a href="https://github.com/itma2" class="redes" target="_blank" title="Github"><i class="fab fa-github fa-2x mx-1"></i></a>
                     </div>
                 </div>
                 <div class="col-md-2 align-self-center">

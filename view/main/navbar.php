@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light  scrorev-nav-control bg-primary menu">
   <div class="container text-center">
 
-    <a class="navbar-brand text-white" href="home"><img loading="lazy" src="<?=DEP_IMG?>favicon.png" width="30px"
+    <a class="navbar-brand text-white" href="<?=Router::redirigir('home')?>"><img loading="lazy" src="<?=DEP_IMG?>favicon.png" width="30px"
       height="30px"> Code Blue</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="btn btn-primary" href="home">
+          <a class="btn btn-primary" href="<?=Router::redirigir('home')?>">
             <i class="fs-5 bi bi-house"></i> Inicio
           </a>
         </li>  

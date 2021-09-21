@@ -40,7 +40,7 @@
                         <div class="col-md-4 align-self-center">
                             <div class="card text-center card-panel mb-3">
                                 <a class="mt-3" href="https://itma2.github.io/code-blue-guia/"
-                                    target="_blank" title="Documentacion" style="color: #005de8;"><b>Documentacion Framework</b></a>
+                                    target="_blank" title="Documentacion" style="color: #005de8;"><b>Documentación Framework</b></a>
                                 <a href="https://itma2.github.io/code-blue-guia/" class="card-body" target="_blank"
                                     title="Documentacion">
                                     <div class="input-group">

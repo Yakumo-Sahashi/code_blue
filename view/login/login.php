@@ -26,8 +26,8 @@
 				</div>
 				 
 				<div class="py-1">
-					<button type="button" class="btn btn-blue btn-block " id="btnSesion">Iniciar Sesion</button>
-					<a href="registro" class="btn btn-blue btn-block ">Registrarse</a>
+					<button type="button" class="btn btn-blue btn-block mb-2" id="btnSesion">Iniciar Sesion</button>
+					<a href="registro" class="btn btn-blue btn-block mb-2">Registrarse</a>
 				</div>
 			</form>
 		</div>
