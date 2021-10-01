@@ -24,6 +24,5 @@
     define("direccion", array(
         'home' => 'view/home',
         'login' => 'view/login/login',
-        'registro' => 'view/login/registro',
     ));
 ?>
