@@ -29,4 +29,4 @@
 		</div>
 	</div>
 </div>
-<script src="<?=CONTROLLER?>funciones_login.js"></script>
+<script src="<?=CONTROLLER?>controller_login.js"></script>

@@ -14,4 +14,4 @@
     <script src="<?=DEP_SCRIPT;?>dataTable/dataTables.bootstrap4.min.js"></script>
     <script src="<?=DEP_SCRIPT;?>plotly/plotly.js"></script>
     <script src="<?=DEP_SCRIPT;?>main.js"></script>
-    <script src="<?=CONTROLLER;?>funciones_sesion.js"></script>
+    <script src="<?=CONTROLLER;?>controller_sesion.js"></script>
