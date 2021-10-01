@@ -1,10 +1,10 @@
 <?php
     define('NOMBRE_SERVIDOR', "localhost");
-    define('NOMBRE_BD', "test");
+    define('NOMBRE_BD', "code_blue");
     define('NOMBRE_USUARIO', "root");
     define('PASSWORD', "");
 
-    define('TITULO_PAGINA', "Project");
+    define('TITULO_PAGINA', "Code Blue");
     
     define('SERVIDOR', "http://localhost/code_blue/");
     
@@ -19,11 +19,10 @@
     define('VIDEO', SERVIDOR . "public/files/video/");
     define('EXCEL', SERVIDOR . "public/files/xlsx/");
     
-    define('error', "view/404");
+    define('error', "view/error/404");
     
     define("direccion", array(
         'home' => 'view/home',
         'login' => 'view/login/login',
-        'registro' => 'view/login/registro',
     ));
 ?>
