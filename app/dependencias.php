@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="<?=DEP_CSS;?>b5/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?=DEP_CSS;?>main.css">
+    <link rel="stylesheet" href="<?=DEP_CSS;?>style.css">
     <link rel="stylesheet" href="<?=DEP_CSS;?>dataTable/dataTables.bootstrap4.min.css">
 
     <script src="<?=DEP_SCRIPT;?>font_awesome/all.js"></script>
