@@ -1,38 +1,29 @@
 <?php 
-    require_once 'conector.php';
-    require_once 'sesion.php';
-    $login = new Login();
+    require_once 'conector.model.php';
+    require_once 'sesion.model.php';
     
-    if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
-        
-        Conector::abrir_conexion();
-        echo $login -> iniciar_sesion(Conector::obtener_conexion());
-
-    }else if($_POST['funcion'] == 3){
-        
-        Conector::abrir_conexion();
-        echo $login -> cerrar_sesion(Conector::obtener_conexion());
-    }
+    Conector::abrir_conexion();
+    call_user_func('Login::'.$_POST['funcion'],Conector::obtener_conexion());
     
     class Login {
         
-        function iniciar_sesion($conexion){
+        static function iniciar_sesion($conexion){
             
-            $resultado = $this->verificacion_acceso($conexion);
+            $resultado = self::verificacion_acceso($conexion);
             
             if ($resultado && password_verify($_POST['password'], $resultado['password'])) {
                 
                 Sesion::crear_sesion($resultado);  
-                $this -> actualizar_estado($conexion, $resultado['idUsuario'], "conectado");
-                echo "2";
+                self::actualizar_estado($conexion, $resultado['idUsuario'], "conectado");
+                echo json_encode("2");
 
             }else {
-                echo "1";	
+                echo json_encode("1");	
             } 
             Conector::cerrar_conexion();
         }
 
-        function verificacion_acceso($conexion){
+        static function verificacion_acceso($conexion){
             
             $consulta = $conexion->prepare("SELECT * FROM t_usuario WHERE usuario=:usuario");
             $consulta -> bindParam(':usuario', $_POST['usuario']);
@@ -40,7 +31,7 @@
             return $consulta -> fetch(PDO::FETCH_ASSOC);
         }
 
-        function actualizar_estado($conexion, $id, $estado){
+        static function actualizar_estado($conexion, $id, $estado){
 
             $sql = $conexion -> prepare("UPDATE t_usuario SET estado= :estado WHERE idUsuario = :idUsuario");
             $sql -> bindParam(':estado',$estado);
@@ -48,12 +39,12 @@
             $sql -> execute();
         }
 
-        function cerrar_sesion($conexion){
+        static function cerrar_sesion($conexion){
             
-            $this -> actualizar_estado($conexion, $_SESSION['user']['idUsuario'], "desconectado");
+            self::actualizar_estado($conexion, $_SESSION['user']['idUsuario'], "desconectado");
             Sesion::destruir_sesion();  
             Conector::cerrar_conexion();     
-            echo "2";
+            echo json_encode("2");
         }
     }
 ?>

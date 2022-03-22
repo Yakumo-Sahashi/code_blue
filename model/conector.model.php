@@ -1,10 +1,10 @@
 <?php 
-    require_once '../app/config.php';
+    require_once 'config.model.php';
 
     class Conector {
         private static $conexion;
         
-        public static function abrir_conexion(){
+        static function abrir_conexion(){
             
             if(!isset(self::$conexion)){
                 try{   
@@ -21,7 +21,7 @@
 
         }
 
-        public static function cerrar_conexion(){
+        static function cerrar_conexion(){
             
 			if(isset(self::$conexion)){
                  
@@ -29,9 +29,11 @@
 			}
 		}
 
-        public static function obtener_conexion(){
+        static function obtener_conexion(){
 			return self::$conexion;
 		}
     }
+
+    Conector::abrir_conexion();
 
 ?>

@@ -1,4 +1,4 @@
-<?php require_once 'model/sesion.php';?>
+<?php require_once 'model/sesion.model.php';?>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary menu">
   <div class="container text-center">
     <a class="navbar-brand text-white" href="<?=Router::redirigir('home')?>"><img loading="lazy" src="<?=DEP_IMG?>favicon.png" width="30px"

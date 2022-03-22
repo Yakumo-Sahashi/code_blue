@@ -1,17 +1,11 @@
 <?php
-    define('NOMBRE_SERVIDOR', "localhost");
-    define('NOMBRE_BD', "code_blue");
-    define('NOMBRE_USUARIO', "root");
-    define('PASSWORD', "");
-
     define('TITULO_PAGINA', "Code Blue");
-    
-    define('SERVIDOR', "http://localhost/code_blue/");
-    
+    define('SERVIDOR', "http://yakumo.demo/code_blue/");
     define('DEP_CSS', SERVIDOR . "public/css/");
     define('DEP_SCRIPT', SERVIDOR . "public/js/");
     define('DEP_IMG', SERVIDOR . "public/img/");
     define('CONTROLLER', SERVIDOR . "controller/");
+    define('LIB_JC', SERVIDOR . "app/lib/JC/");
     
     define('AUDIO', SERVIDOR . "public/files/audio/");
     define('DOC', SERVIDOR . "public/files/doc/");
@@ -19,10 +13,10 @@
     define('VIDEO', SERVIDOR . "public/files/video/");
     define('EXCEL', SERVIDOR . "public/files/xlsx/");
     
-    define('error', "view/error/404");
-    
     define("direccion", array(
-        'home' => 'view/home',
-        'login' => 'view/login/login',
+        'home' => 'view/home.view',
+        'login' => 'view/login/login.view',
+        'prueba' => 'view/login/registro.view',
+        'error' => 'view/error/error404.view',
     ));
 ?>
