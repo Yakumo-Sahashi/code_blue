@@ -13,11 +13,11 @@
 			<form id="frm_login" class="form-grup mb-3 ml-3 mr-3">
 				<div class="input-group mb-2">
 					<span class="input-group-text borde-left"><i class="fas fa-user-alt"></i></span>
-					<input type="text" class="form-control input borde-right" name="usuario" id="usuario"  placeholder="Usuario">
+					<input type="text" class="form-control input borde-right" name="usuario" placeholder="Usuario">
 				</div>
 				<div class="input-group mb-3">
 					<span class="input-group-text borde-left"><i class="fas fa-lock"></i></span>
-					<input type="password" class="form-control input borde-right" name="password" id="password"  placeholder="Contraseña">
+					<input type="password" class="form-control input borde-right" name="password" placeholder="Contraseña">
 				</div>
 				 
 				<div class="py-1">
