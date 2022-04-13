@@ -87,6 +87,16 @@ var restriccion = {
     "msj": "Estructura de correo no valida! en campo "
   }
 };
+var caracter = {
+  "numeros": {
+    "expresion": /[^0-9]/g,
+    "msj": "No puedes dejar vacio el campo "
+  },
+  "letras": {
+    "expresion": /^([a-zA-Záéíóú]+[\s]?)/i,
+    "msj": "Solo puedes ingresar letras en el campo "
+  }
+};
 /**
  * 
  * @param {string[]||String} input lista de input a validar
@@ -139,6 +149,42 @@ var validar_campo = function validar_campo(input, tipo_validacion) {
 
   error != "" ? msj_error(mensaje != "" ? mensaje : "".concat(msj_final, " ").concat(error)) : error;
   return resultado;
+};
+/**
+ * 
+ * @param {String} input nombre del input a convertir a mayusculas
+ */
+
+
+var caracter_mayus = function caracter_mayus(input) {
+  $("[name=".concat(input, "]")).on('input', function () {
+    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().toUpperCase());
+  });
+};
+/**
+ * 
+ * @param {String} input input nombre del input a convertir a minusculas
+ */
+
+
+var caracter_minus = function caracter_minus(input) {
+  $("[name=".concat(input, "]")).on('input', function () {
+    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().toLowerCase());
+  });
+};
+/**
+ * 
+ * @param {String} input input nombre del input al cual ser evaluara su contenido
+ * @param {String} admitido recibibe como cadena el valor que sera admitido en el input
+ */
+
+
+var bloquer_caracter = function bloquer_caracter(input) {
+  var admitido = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+  var expresion = caracter["".concat(admitido)].expresion;
+  $("[name=".concat(input, "]")).on('input', function () {
+    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().replace(expresion, ''));
+  });
 };
 /**
  * 

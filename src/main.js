@@ -80,6 +80,17 @@ const restriccion = {
 	}
 };
 
+const caracter = {
+	"numeros": {
+		"expresion": /[^0-9]/g,
+		"msj": "No puedes dejar vacio el campo "
+	},
+	"letras": {
+		"expresion": /^([a-zA-Záéíóú]+[\s]?)/i,
+		"msj": "Solo puedes ingresar letras en el campo "
+	},
+};
+
 /**
  * 
  * @param {string[]||String} input lista de input a validar
@@ -123,6 +134,35 @@ const validar_campo = (input, tipo_validacion, mensaje = "") => {
 	}
 	error != "" ? msj_error(mensaje != "" ? mensaje :  `${msj_final} ${error}`) : error;
 	return resultado;
+}
+/**
+ * 
+ * @param {String} input nombre del input a convertir a mayusculas
+ */
+const caracter_mayus = (input) => {
+	$(`[name=${input}]`).on('input', () => {
+		$(`[name=${input}]`).val($(`[name=${input}]`).val().toUpperCase());
+	});
+}
+/**
+ * 
+ * @param {String} input input nombre del input a convertir a minusculas
+ */
+const caracter_minus = (input) => {
+	$(`[name=${input}]`).on('input', () => {
+		$(`[name=${input}]`).val($(`[name=${input}]`).val().toLowerCase());
+	});
+}
+/**
+ * 
+ * @param {String} input input nombre del input al cual ser evaluara su contenido
+ * @param {String} admitido recibibe como cadena el valor que sera admitido en el input
+ */
+const bloquer_caracter = (input,admitido = "") => {
+	let {expresion} = caracter[`${admitido}`];
+	$(`[name=${input}]`).on('input', () => {
+		$(`[name=${input}]`).val($(`[name=${input}]`).val().replace(expresion, ''));
+	});
 }
 /**
  * 
