@@ -1,8 +1,10 @@
-$(document).ready(()=> {
-  $('#btn_cerrar_sesion').on('click', (e) => { 
-    let datos = new FormData();
-    datos.append('funcion', 'cerrar_sesion')
-    const ejecucion = new Consultas("login", datos);
+"use strict";
+
+$(document).ready(function () {
+  $('#btn_cerrar_sesion').on('click', function (e) {
+    var datos = new FormData();
+    datos.append('funcion', 'cerrar_sesion');
+    var ejecucion = new Consultas("login", datos);
     ejecucion.sesion();
-	});  
+  });
 });

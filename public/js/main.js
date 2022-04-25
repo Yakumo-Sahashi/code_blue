@@ -152,7 +152,7 @@ var validar_campo = function validar_campo(input, tipo_validacion) {
 };
 /**
  * 
- * @param {String} input nombre del input a convertir a mayusculas
+ * @param {String} input recibe el nombre del input a convertir su contenido a mayusculas 
  */
 
 
@@ -163,7 +163,7 @@ var caracter_mayus = function caracter_mayus(input) {
 };
 /**
  * 
- * @param {String} input input nombre del input a convertir a minusculas
+ * @param {String} input recibe el nombre del input a convertir su contenido a minusculas
  */
 
 
@@ -174,22 +174,26 @@ var caracter_minus = function caracter_minus(input) {
 };
 /**
  * 
- * @param {String} input input nombre del input al cual ser evaluara su contenido
- * @param {String} admitido recibibe como cadena el valor que sera admitido en el input
+ * @param {String} input recibe el nombre del input para admitir solo caracteres numericos
  */
 
 
-var bloquer_caracter = function bloquer_caracter(input) {
-  var admitido = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-  var expresion = caracter["".concat(admitido)].expresion;
+var caracter_numeros = function caracter_numeros(input) {
   $("[name=".concat(input, "]")).on('input', function () {
-    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().replace(expresion, ''));
+    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().replace(/[^0-9]/g, ''));
   });
 };
 /**
  * 
+ * @param {String} input recibe el nombre del input para admitir solo letras
  */
 
+
+var caracter_letras = function caracter_letras(input) {
+  $("[name=".concat(input, "]")).on('input', function () {
+    $("[name=".concat(input, "]")).val($("[name=".concat(input, "]")).val().replace(/([^a-zA-Záéíóú\s])/i, ''));
+  });
+};
 
 var Consultas = /*#__PURE__*/function () {
   /**

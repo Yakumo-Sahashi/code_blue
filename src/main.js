@@ -137,7 +137,7 @@ const validar_campo = (input, tipo_validacion, mensaje = "") => {
 }
 /**
  * 
- * @param {String} input nombre del input a convertir a mayusculas
+ * @param {String} input recibe el nombre del input a convertir su contenido a mayusculas 
  */
 const caracter_mayus = (input) => {
 	$(`[name=${input}]`).on('input', () => {
@@ -146,7 +146,7 @@ const caracter_mayus = (input) => {
 }
 /**
  * 
- * @param {String} input input nombre del input a convertir a minusculas
+ * @param {String} input recibe el nombre del input a convertir su contenido a minusculas
  */
 const caracter_minus = (input) => {
 	$(`[name=${input}]`).on('input', () => {
@@ -155,18 +155,22 @@ const caracter_minus = (input) => {
 }
 /**
  * 
- * @param {String} input input nombre del input al cual ser evaluara su contenido
- * @param {String} admitido recibibe como cadena el valor que sera admitido en el input
+ * @param {String} input recibe el nombre del input para admitir solo caracteres numericos
  */
-const bloquer_caracter = (input,admitido = "") => {
-	let {expresion} = caracter[`${admitido}`];
+const caracter_numeros = (input) => {
 	$(`[name=${input}]`).on('input', () => {
-		$(`[name=${input}]`).val($(`[name=${input}]`).val().replace(expresion, ''));
+		$(`[name=${input}]`).val($(`[name=${input}]`).val().replace(/[^0-9]/g, ''));
 	});
 }
 /**
  * 
+ * @param {String} input recibe el nombre del input para admitir solo letras
  */
+const caracter_letras = (input) => {
+	$(`[name=${input}]`).on('input', () => {
+		$(`[name=${input}]`).val($(`[name=${input}]`).val().replace(/([^a-zA-Záéíóú\s])/i, ''));
+	});
+}
 class Consultas {
 	/**
 	 * 

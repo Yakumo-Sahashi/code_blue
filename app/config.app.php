@@ -1,6 +1,6 @@
 <?php
     define('TITULO_PAGINA', "Code Blue");
-    define('SERVIDOR', "http://yakumo.demo/code_blue/");
+    define('SERVIDOR', "http://code.blue/");
     define('DEP_CSS', SERVIDOR . "public/css/");
     define('DEP_SCRIPT', SERVIDOR . "public/js/");
     define('DEP_IMG', SERVIDOR . "public/img/");
